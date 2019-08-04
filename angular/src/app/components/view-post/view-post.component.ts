@@ -11,7 +11,7 @@ import {USComment} from "../../classes/Comment";
 export class ViewPostComponent implements OnInit {
 
   post: Post;
-  comments: USComment[];
+  comments: USComment[] = [];
   addPost: boolean;
   name: string;
   commentText: string;
@@ -22,9 +22,6 @@ export class ViewPostComponent implements OnInit {
     this.initProperties();
     this.commService.currentPost.subscribe(p => {
       this.post = p;
-    });
-    this.commService.comments.subscribe(c => {
-      this.comments = c;
     });
   }
 

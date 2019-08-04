@@ -9,7 +9,7 @@
     <button class="send-btn" (click)="$event.stopPropagation(); addComment()">Comment</button>
   </div>
   <div *ngIf="comments" class="comments-wrapper">
-    <div *ngFor="let comment of comments" class="comment">
+    <div *ngFor="let comment of commService.comments | async" class="comment">
       <app-comment [comment]="comment"></app-comment>
     </div>
   </div>
