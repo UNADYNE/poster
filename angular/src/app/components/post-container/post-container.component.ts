@@ -25,14 +25,14 @@ export class PostContainerComponent implements OnInit {
   ngOnInit() {
   }
 
-  createRandomString(length) {
+  createRandomString(length) { // create a UID for post
     const charList = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789$';
     let text = '';
     for (let i = 0; i < length; i++) {
       text += charList.charAt(Math.floor(Math.random() * charList.length));
     }
     return text;
-  };
+  }
 
   savePost(): void {
     const newPost = new Post(
@@ -48,12 +48,15 @@ export class PostContainerComponent implements OnInit {
 
   navigateToPost(post): void {
     this.commService.setCurrentPost(post);
-    this.setLocal(post);
     this.router.navigate([`/view-post/${post._id}`]); // simulate get post from API
   }
 
   setLocal(post) {
     localStorage.clear();
     localStorage.setItem('post', JSON.stringify(post));
+  }
+
+  clearStorage() {
+    localStorage.clear();
   }
 }

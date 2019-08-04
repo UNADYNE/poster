@@ -6,9 +6,16 @@
   background-color: white;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, .6);
 }
+
+.vp-title {
+  text-align: center;
+  top: 1rem;
+  left: 33.3%;
+}
+
 .vp-body {
   white-space: pre-line;
-  margin-bottom: 4rem;
+  margin: 2rem 0 4rem 0;
 }
 
 .add-fab {
@@ -25,6 +32,6 @@
 
 .comments-wrapper {
   width: 28rem;
-  height: 28rem;
-  overflow-y: scroll;
+  //height: 28rem;
+  //overflow-y: scroll;
 }

@@ -20,12 +20,9 @@ export class ViewPostComponent implements OnInit {
 
   ngOnInit() {
     this.initProperties();
-    // this.commService.currentPost.subscribe(p => {
-    //   this.post = p;
-    // });
-    this.post = JSON.parse(localStorage.getItem('post'));
-    // console.log(JSON.parse(localStorage.getItem('post')));
-    // console.log(localStorage.getItem('post'));
+    this.commService.currentPost.subscribe(p => {
+      this.post = p;
+    });
     this.commService.comments.subscribe(c => {
       this.comments = c;
     });
@@ -36,9 +33,12 @@ export class ViewPostComponent implements OnInit {
   }
 
   addComment(): void {
+    this.addPost = false;
     const _comment = new USComment(new Date(), this.name, this.commentText);
     this.comments.push(_comment);
     this.commService.addComment(this.comments);
+    this.name = undefined;
+    this.commentText = undefined;
   }
 
 

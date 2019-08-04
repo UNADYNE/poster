@@ -1,3 +1,5 @@
-<p>
-  comment works!
-</p>
+<div *ngIf="comment" class="comment-wrapper">
+  <p class="comment-date">{{comment.date | date}}</p>
+  <p class="comment-name">{{comment.fromName}}</p>
+  <p class="comment-text">{{comment.commentText}}</p>
+</div>

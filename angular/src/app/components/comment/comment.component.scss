@@ -1,0 +1,26 @@
+.comment-wrapper {
+  background-color: #ffffff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+  color: #474747;
+  padding: 1rem;
+  width: 40%;
+  margin-bottom: 1rem;
+}
+
+.comment-date {
+  font-size: .4rem;
+  font-weight: 600;
+  padding: 3px;
+}
+
+.comment-name {
+  font-size: .6rem;
+  font-weight: 800;
+  padding: 3px;
+}
+
+.comment-wrapper::-webkit-scrollbar {
+  background: transparent;
+  width: 0;
+  padding: 3px;
+}
