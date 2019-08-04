@@ -1,0 +1,36 @@
+.post-wrapper {
+  cursor: pointer;
+  background-color: #696969;
+  color: white;
+  padding: 1rem;
+  width: 80%;
+  margin: 1rem auto;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, .5);
+}
+
+.post-date {
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.post-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.post-body {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.view-post-btn {
+  background-color: #fffdfd;
+  border: none;
+  height: 3rem;
+  width: 9rem;
+  border-radius: 3px;
+  /* box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); */
+  color: #424242;
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin: 1rem 0 0 32%;
+}

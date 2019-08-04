@@ -1,0 +1,17 @@
+<div *ngIf="post" class="view-post-wrapper">
+  <p class="vp-date">{{post.date | date: 'MMM dd, y - hh:mm:ss'}}</p>
+  <p class="vp-title">"{{post.title}}"</p>
+  <p class="vp-by">by: {{post.postedBy}}</p>
+  <p class="vp-body">{{post.body}}</p>
+  <div *ngIf="addPost" class="add-post-wrapper">
+    <input type="text" class="inset main-input" placeholder="Name" [(ngModel)]="name">
+    <textarea class="inset text-input" name="comment" id="comment"  rows="10" [(ngModel)]="commentText"></textarea>
+    <button class="send-btn" (click)="$event.stopPropagation(); addComment()">Comment</button>
+  </div>
+  <div class="comments-wrapper">
+    <div *ngFor="let comment of comments" class="comment">
+      <app-comment [comment]="comment"></app-comment>
+    </div>
+  </div>
+  <button *ngIf="!addPost" mat-mini-fab class="add-fab"><mat-icon (click)="addPost = true">comment</mat-icon></button>
+</div>

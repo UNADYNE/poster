@@ -1,0 +1,30 @@
+.view-post-wrapper {
+  width: 50%;
+  height: 80%;
+  padding: 2rem 4rem;
+  margin: 4rem auto;
+  background-color: white;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .6);
+}
+.vp-body {
+  white-space: pre-line;
+  margin-bottom: 4rem;
+}
+
+.add-fab {
+  background-color: #474747;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.add-post-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.comments-wrapper {
+  width: 28rem;
+  height: 28rem;
+  overflow-y: scroll;
+}

@@ -1,0 +1,6 @@
+<div *ngIf="post" data-id="{{post._id}}" class="post-wrapper" (click)="viewPost()">
+  <p class="post-date">{{post.date | date : 'hh:mm:ss'}}</p>
+  <p class="post-body">{{post.title}}</p>
+  <p class="post-name">by: {{post.postedBy}}</p>
+  <button class="view-post-btn">Read Post</button>
+</div>

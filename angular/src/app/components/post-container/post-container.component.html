@@ -1,0 +1,16 @@
+<div class="main-container">
+  <div class="send-wrapper">
+    <input type="text" class="inset main-input" name="name" placeholder="Sender's Name" [(ngModel)]="name">
+    <input type="text" class="inset main-input" name="title" placeholder="Title" [(ngModel)]="title">
+    <textarea name="body" rows="30" class="inset text-input" placeholder="Add Post" [(ngModel)]="body"></textarea>
+    <button class="send-btn" (click)="savePost()">Save</button>
+  </div>
+
+  <div class="posts-wrapper inset">
+    <div class="posts-anchor" *ngFor="let post of commService.posts | async">
+      <app-post-presenter [post]="post" (goToPost)="navigateToPost(post)"></app-post-presenter>
+    </div>
+  </div>
+</div>
+
+
